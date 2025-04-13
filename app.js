@@ -1,4 +1,4 @@
-// 메뉴 항목 클릭 시 스크롤 애니메이션 추가
+
 document.querySelectorAll('nav ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
