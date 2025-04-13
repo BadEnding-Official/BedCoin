@@ -1,0 +1,158 @@
+/* 기본 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 바디 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding-top: 100px;
+    /* 네비게이션 바 높이에 맞게 여백을 약간 더 추가 */
+    overflow-x: hidden;
+    /* 수평 스크롤 방지 */
+}
+
+/* 네비게이션 바 */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    z-index: 100;
+    width: 100%;
+    /* 화면 전체 너비 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* 그림자 추가 */
+}
+
+/* 네비게이션 메뉴 스타일 */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 메뉴 항목 */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    padding: 12px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* BadEnding 스타일만 다르게 적용 */
+nav ul li:first-child a {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ff99;
+}
+
+/* Hover 효과 */
+nav ul li a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* 섹션 기본 스타일 */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* 수직 중앙 정렬 */
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    /* 상하 패딩 제거 */
+    min-height: 100vh;
+    height: 100%;
+    /* 화면 꽉 차게 */
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+/* 제목 스타일 */
+section h1 {
+    font-size: 8vw;
+    /* 화면 크기에 비례한 글자 크기 */
+    margin-bottom: 20px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* 섹션별 텍스트 스타일 */
+section p {
+    font-size: 4vw;
+    /* 화면 크기에 비례한 글자 크기 */
+    line-height: 1.6;
+    max-width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* 홈 섹션 이미지 + 텍스트 정렬 */
+#home>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 이미지 스타일 */
+#home img {
+    max-width: 50%;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 섹션별 배경에 위→아래로 흰색에서 검정색으로 그라데이션 */
+#home {
+    background: linear-gradient(to bottom, #dcdcdc, #a9a9a9);
+}
+
+#about {
+    background: linear-gradient(to bottom, #a9a9a9, #666666);
+}
+
+#howToBuy {
+    background: linear-gradient(to bottom, #666666, #333333);
+    color: white;
+}
+
+#roadmap {
+    background: linear-gradient(to bottom, #333333, #000000);
+    color: white;
+}
+
+/* 네비게이션 바와 섹션 사이의 여백 없애기 */
+body,
+section {
+    margin: 0;
+    padding: 0;
+}
+
+/* 홈 섹션에 상단 여백 추가 */
+#home {
+    padding-top: 80px;
+    /* 네비게이션 바와 BadEnding 글자 사이에 여백 추가 */
+}
+
+/* 추가: 네비게이션 바와 첫 번째 섹션 사이의 스크롤 안 생기게 처리 */
+html,
+body {
+    height: 100%;
+}
